@@ -1,6 +1,14 @@
+import { NavLink } from 'react-router-dom';
 import { FiHome, FiCheckSquare, FiCalendar, FiSettings, FiBriefcase } from 'react-icons/fi';
 
 const Sidebar = () => {
+  const navLinkClass = ({ isActive }) =>
+    `flex items-center gap-3 p-2 rounded transition ${
+      isActive
+        ? 'bg-slate-800 text-white'
+        : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+    }`;
+
   return (
     <aside className="w-64 bg-slate-950 text-slate-300 h-screen flex flex-col p-4 border-r border-slate-800">
       <div className="mb-8 font-bold text-xl text-white flex items-center gap-2 px-2">
@@ -8,24 +16,24 @@ const Sidebar = () => {
         Productivity App
       </div>
       <nav className="flex-1 space-y-2">
-        <a href="#" className="flex items-center gap-3 p-2 rounded hover:bg-slate-800 transition text-slate-300 hover:text-white">
+        <NavLink to="/dashboard" className={navLinkClass}>
           <FiHome className="w-5 h-5" />
           Dashboard
-        </a>
-        <a href="#" className="flex items-center gap-3 p-2 rounded hover:bg-slate-800 transition text-slate-300 hover:text-white">
+        </NavLink>
+        <NavLink to="/tasks" className={navLinkClass}>
           <FiCheckSquare className="w-5 h-5" />
           Tasks
-        </a>
-        <a href="#" className="flex items-center gap-3 p-2 rounded hover:bg-slate-800 transition text-slate-300 hover:text-white">
+        </NavLink>
+        <NavLink to="/calendar" className={navLinkClass}>
           <FiCalendar className="w-5 h-5" />
           Calendar
-        </a>
+        </NavLink>
       </nav>
       <div className="mt-auto">
-        <a href="#" className="flex items-center gap-3 p-2 rounded hover:bg-slate-800 transition text-slate-300 hover:text-white">
+        <NavLink to="/settings" className={navLinkClass}>
           <FiSettings className="w-5 h-5" />
           Settings
-        </a>
+        </NavLink>
       </div>
     </aside>
   );
