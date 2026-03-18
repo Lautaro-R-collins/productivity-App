@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiHome, FiCheckSquare, FiCalendar, FiSettings, FiBriefcase } from 'react-icons/fi';
 
 const Sidebar = () => {
