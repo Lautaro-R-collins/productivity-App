@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiList, FiClock, FiActivity } from 'react-icons/fi';
 
 const Workspace = () => {
