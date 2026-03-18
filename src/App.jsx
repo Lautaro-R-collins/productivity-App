@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
-import Workspace from './components/Workspace';
+import Workspace from './components/workspace/Workspace';
 
 function App() {
   return (
