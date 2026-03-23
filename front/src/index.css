@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+/* Custom Dark Mode for React Big Calendar */
+.rb-calendar-dark .rbc-calendar {
+  color: #f8fafc;
+}
+.rb-calendar-dark .rbc-btn-group button {
+  color: #cbd5e1;
+  border-color: #334155 !important;
+  background-color: #1e293b;
+}
+.rb-calendar-dark .rbc-btn-group button:hover {
+  background-color: #334155;
+}
+.rb-calendar-dark .rbc-btn-group button.rbc-active {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border-color: #4f46e5 !important;
+}
+.rb-calendar-dark .rbc-month-view,
+.rb-calendar-dark .rbc-time-view,
+.rb-calendar-dark .rbc-header,
+.rb-calendar-dark .rbc-day-bg,
+.rb-calendar-dark .rbc-month-row,
+.rb-calendar-dark .rbc-timeslot-group,
+.rb-calendar-dark .rbc-time-header-content {
+  border-color: #334155 !important;
+}
+.rb-calendar-dark .rbc-off-range-bg {
+  background-color: #0f172a;
+}
+.rb-calendar-dark .rbc-today {
+  background-color: #334155;
+}
+.rb-calendar-dark .rbc-event {
+  background-color: #6366f1;
+}
