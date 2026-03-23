@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FiList, FiClock, FiActivity, FiServer } from 'react-icons/fi';
-import api from '../../services/api';
+import api from '../services/api';
 
 const Dashboard = () => {
   const [apiStatus, setApiStatus] = useState('Desconectado');
