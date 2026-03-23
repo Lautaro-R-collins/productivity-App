@@ -9,7 +9,6 @@ function App() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
-        {/* Redirect root to dashboard */}
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/tasks" element={<Tasks />} />
@@ -18,6 +17,6 @@ function App() {
       </Route>
     </Routes>
   );
-}
+}   
 
 export default App;
