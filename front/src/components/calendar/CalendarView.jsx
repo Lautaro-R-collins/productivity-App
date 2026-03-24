@@ -18,17 +18,17 @@ const localizer = dateFnsLocalizer({
 
 const CalendarView = ({ events, onSelectSlot, onSelectEvent }) => {
   return (
-    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 shadow-lg flex-1 min-h-[600px] overflow-hidden rb-calendar-dark">
+    <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 shadow-lg flex-1 overflow-hidden rb-calendar-dark">
       <BigCalendar
         localizer={localizer}
         events={events}
         startAccessor="start"
         endAccessor="end"
-        selectable
+        selectable={true}
         onSelectSlot={onSelectSlot}
         onSelectEvent={onSelectEvent}
         views={['month', 'week', 'day', 'agenda']}
-        className="h-full"
+        style={{ height: '70vh', minHeight: '600px' }}
         messages={{
           next: "Sig",
           previous: "Ant",
