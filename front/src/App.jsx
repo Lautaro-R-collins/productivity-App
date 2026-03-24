@@ -3,6 +3,7 @@ import MainLayout from './layouts/MainLayout';
 import Dashboard from './pages/Dashboard';
 import Tasks from './pages/Tasks';
 import Calendar from './pages/Calendar';
+import Pomodoro from './pages/Pomodoro';
 import Settings from './pages/Settings';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/calendar" element={<Calendar />} />
+        <Route path="/pomodoro" element={<Pomodoro />} />
         <Route path="/settings" element={<Settings />} />
       </Route>
     </Routes>
