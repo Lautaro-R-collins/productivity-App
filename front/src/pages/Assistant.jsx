@@ -1,12 +1,14 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 import { generateChatResponse } from '../services/groqService';
 import AssistantHeader from '../components/assistant/AssistantHeader';
 import ChatMessageList from '../components/assistant/ChatMessageList';
 import ChatInput from '../components/assistant/ChatInput';
+import { AuthContext } from '../context/AuthContext';
 
 const Assistant = () => {
+  const { user } = useContext(AuthContext);
   const [messages, setMessages] = useState([
-    { role: 'assistant', content: '¡Hola, Lauta! Soy tu asistente impulsado por IA. ¿En qué te puedo ayudar hoy con tu productividad?' }
+    { role: 'assistant', content: `¡Hola, ${user?.username || 'colega'}! Soy tu asistente impulsado por IA. ¿En qué te puedo ayudar hoy con tu productividad?` }
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
