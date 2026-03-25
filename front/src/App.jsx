@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard';
 import Tasks from './pages/Tasks';
 import Calendar from './pages/Calendar';
 import Pomodoro from './pages/Pomodoro';
+import Assistant from './pages/Assistant';
 import Settings from './pages/Settings';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/pomodoro" element={<Pomodoro />} />
+        <Route path="/assistant" element={<Assistant />} />
         <Route path="/settings" element={<Settings />} />
       </Route>
     </Routes>
