@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { FiHome, FiCheckSquare, FiCalendar, FiSettings, FiBriefcase, FiClock } from 'react-icons/fi';
+import { FiHome, FiCheckSquare, FiCalendar, FiSettings, FiBriefcase, FiClock, FiMessageSquare } from 'react-icons/fi';
 
 const Sidebar = () => {
   const navLinkClass = ({ isActive }) =>
@@ -31,6 +31,10 @@ const Sidebar = () => {
         <NavLink to="/pomodoro" className={navLinkClass}>
           <FiClock className="w-5 h-5" />
           Pomodoro
+        </NavLink>
+        <NavLink to="/assistant" className={navLinkClass}>
+          <FiMessageSquare className="w-5 h-5" />
+          Asistente AI
         </NavLink>
       </nav>
       <div className="mt-auto">
