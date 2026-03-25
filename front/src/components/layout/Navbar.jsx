@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { FiBell, FiUser } from 'react-icons/fi';
 import api from '../../services/api';
 import { isToday } from 'date-fns';
+import { AuthContext } from '../../context/AuthContext';
 
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
   const [notifications, setNotifications] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -28,8 +30,18 @@ const Navbar = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const getGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour < 12) return 'Buenos días';
+    if (hour < 20) return 'Buenas tardes';
+    return 'Buenas noches';
+  };
+
   return (
-    <header className="h-16 bg-slate-900 border-b border-slate-800 flex items-center justify-end px-6 text-slate-300">
+    <header className="h-16 bg-slate-900 border-b border-slate-800 flex items-center justify-between px-6 text-slate-300">
+      <div className="font-medium text-slate-400">
+        {getGreeting()}, <span className="text-white font-bold">{user?.username || 'Usuario'}</span>
+      </div>
       <div className="flex items-center space-x-6 relative">
         <button 
           className="text-slate-400 cursor-pointer hover:text-white transition relative"
@@ -71,9 +83,6 @@ const Navbar = () => {
           </div>
         )}
 
-        <div className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-white cursor-pointer hover:bg-slate-600 transition">
-          <FiUser className="w-4 h-4" />
-        </div>
       </div>
     </header>
   );
