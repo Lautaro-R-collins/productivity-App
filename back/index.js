@@ -6,6 +6,7 @@ const connectDB = require('./src/config/db');
 const healthRoutes = require('./src/routes/health');
 const eventRoutes = require('./src/routes/events');
 const taskRoutes = require('./src/routes/tasks');
+const authRoutes = require('./src/routes/auth');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -21,6 +22,7 @@ app.use(express.json());
 app.use('/api/health', healthRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/tasks', taskRoutes);
+app.use('/api/auth', authRoutes);
 
 // Start Server
 app.listen(PORT, () => {
