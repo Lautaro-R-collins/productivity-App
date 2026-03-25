@@ -1,7 +1,10 @@
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FiHome, FiCheckSquare, FiCalendar, FiSettings, FiBriefcase, FiClock, FiMessageSquare } from 'react-icons/fi';
+import { FiHome, FiCheckSquare, FiCalendar, FiSettings, FiBriefcase, FiClock, FiMessageSquare, FiLogOut } from 'react-icons/fi';
+import { AuthContext } from '../../context/AuthContext';
 
 const Sidebar = () => {
+  const { logout } = useContext(AuthContext);
   const navLinkClass = ({ isActive }) =>
     `flex items-center gap-3 p-2 rounded transition ${
       isActive
@@ -37,11 +40,18 @@ const Sidebar = () => {
           Asistente AI
         </NavLink>
       </nav>
-      <div className="mt-auto">
+      <div className="mt-auto flex flex-col gap-2">
         <NavLink to="/settings" className={navLinkClass}>
           <FiSettings className="w-5 h-5" />
           Settings
         </NavLink>
+        <button 
+          onClick={logout}
+          className="flex cursor-pointer items-center gap-3 p-2 rounded transition text-rose-400 hover:bg-rose-500/10 hover:text-rose-300 w-full text-left"
+        >
+          <FiLogOut className="w-5 h-5" />
+          Cerrar Sesión
+        </button>
       </div>
     </aside>
   );
