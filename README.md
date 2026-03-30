@@ -1,6 +1,12 @@
 # Productivity App
 
 A full-stack, multi-tenant productivity web application designed to help users manage tasks, schedule calendar events, maintain focus using the Pomodoro technique, and interact with a seamlessly integrated AI assistant.
+<img width="1366" height="642" alt="Screenshot 2026-03-25 at 15-19-41 productivity-app" src="https://github.com/user-attachments/assets/7f1f99c4-d73a-4b96-9552-6a182b0f46f3" />
+<img width="1366" height="642" alt="Screenshot 2026-03-25 at 15-20-01 productivity-app" src="https://github.com/user-attachments/assets/7bfa94c9-fc7d-4f95-a88b-1dfb67c54d23" />
+
+<img width="1366" height="642" alt="Screenshot 2026-03-25 at 15-20-09 productivity-app" src="https://github.com/user-attachments/assets/58d294df-e376-4ec7-95b2-2acab4bf3b3b" />
+
+<img width="1366" height="642" alt="Screenshot 2026-03-25 at 15-20-21 productivity-app" src="https://github.com/user-attachments/assets/53e6e1cd-8a8d-4b5b-95c3-09734c2f6d13" />
 
 ## Features
 
